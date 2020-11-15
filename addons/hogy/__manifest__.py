@@ -23,6 +23,9 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'views/menu.xml',
+        'views/person/coach.xml',
+        'views/person/disciple.xml',
     ],
     # only loaded in demonstration mode
     'demo': [],

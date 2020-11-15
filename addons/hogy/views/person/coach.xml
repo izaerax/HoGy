@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="coach_view_form" model="ir.ui.view">
+            <field name="name">coach.form</field>
+            <field name="model">hogy.coach</field>
+            <field name="priority" eval="16"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <h1>
+                            <fields name="name"/>
+                        </h1>
+                    </header>
+                    <group>
+                        <fields name="email"/>
+                        <fields name="birth_date"/>
+                        <fields name="user_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="coach_view_tree" model="ir.ui.view">
+            <field name="name">coach.tree</field>
+            <field name="model">hogy.coach</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Coaches list">
+                    <fields name="name"/>
+                    <fields name="email"/>
+                    <fields name="birth_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_list_coaches">
+            <field name="name">coaches</field>
+            <field name="res_model">hogy.coach</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_coach" parent="hogy_coach_menu" name="Coaches" sequence="10"
+                  action="action_list_coaches"/>
+    </data>
+</odoo>

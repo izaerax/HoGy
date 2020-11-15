@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="disciple_view_form" model="ir.ui.view">
+            <field name="name">disciple form view</field>
+            <field name="model">hogy.disciple</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <h1>
+                            <fields name="name"/>
+                        </h1>
+                    </header>
+                    <group>
+                        <fields name="email"/>
+                        <fields name="birth_date"/>
+                        <fields name="user_id"/>
+                        <fields name="coach_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="disciple_view_tree" model="ir.ui.view">
+            <field name="name">disciple tree view</field>
+            <field name="model">hogy.disciple</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <fields name="name"/>
+                    <fields name="email"/>
+                    <fields name="birth_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_list_disciples">
+            <field name="name">Disciples</field>
+            <field name="res_model">hogy.disciple</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_coach" parent="hogy_disciple_menu" name="Disciples" sequence="10"
+                  action="action_list_discipless"/>
+    </data>
+</odoo>

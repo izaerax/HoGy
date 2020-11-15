@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- menu -->
+        <menuitem id="hogy_main_menu" name="Hogy" groups="base.group_user"/>
+        <menuitem id="hogy_coach_menu" name="Coach" parent="hogy_main_menu"/>
+        <menuitem id="hogy_disciple_menu" name="Disciple" parent="hogy_main_menu"/>
+    </data>
+</odoo>
