@@ -8,14 +8,14 @@
                 <form>
                     <header>
                         <h1>
-                            <fields name="name"/>
+                            <field name="name"/>
                         </h1>
                     </header>
                     <group>
-                        <fields name="email"/>
-                        <fields name="birth_date"/>
-                        <fields name="user_id"/>
-                        <fields name="coach_id"/>
+                        <field name="email"/>
+                        <field name="birth_date"/>
+                        <field name="user_id"/>
+                        <field name="coach_id"/>
                     </group>
                 </form>
             </field>
@@ -26,9 +26,9 @@
             <field name="model">hogy.disciple</field>
             <field name="arch" type="xml">
                 <tree>
-                    <fields name="name"/>
-                    <fields name="email"/>
-                    <fields name="birth_date"/>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="birth_date"/>
                 </tree>
             </field>
         </record>
